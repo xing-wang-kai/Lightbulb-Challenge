@@ -3,21 +3,23 @@
 <script>
 
     window.onload = function(){
-        function turnOnOff () {
 
-            let bulbo = document.getElementById("myImage").src;
+        const $ = window.document.querySelector.bind(document);
+        function turnOnOff () {
+            
+            let bulbo = $("#myImage").src;
             let bulbo_off_img  = "https://www.w3schools.com/js/pic_bulboff.gif";
             let bulbo_on_img = "https://www.w3schools.com/js/pic_bulbon.gif";
     
             if (bulbo == bulbo_on_img){
-                document.getElementById("myImage").src  = bulbo_off_img;
+                $("#myImage").src  = bulbo_off_img;
             }else{
-                document.getElementById("myImage").src  = bulbo_on_img;
+                $("#myImage").src  = bulbo_on_img;
             }
             
         }
     
-        let lamp  = document.getElementById("myImage").addEventListener("click", turnOnOff);
+        let lamp  = $("#myImage").addEventListener("click", turnOnOff);
     }
     
 
